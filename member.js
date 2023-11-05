@@ -1,13 +1,9 @@
-function skillMembers() {
-    var members = document.getElementsByClassName("member");
-    var i;
-    for (i = 0; i < members.length; i++) {
-        members[i].style.display = "none";
+function skillsMember() {
+    return {
+      restrict: 'E',
+      scope: {
+        member: '='
+      },
+      templateUrl: 'templates/members/skills.html'
     }
-    var skill = document.getElementById("skill").value;
-    var members = document.getElementsByClassName(skill);
-    var i;
-    for (i = 0; i < members.length; i++) {
-        members[i].style.display = "block";
-    }
-}
+  }
